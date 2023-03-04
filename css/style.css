@@ -18,7 +18,6 @@
 body {
   font-family: "Jost", sans-serif;
   background-color: var(--white);
-  height: 3000px;
 }
 /* Navbar */
 nav {
@@ -59,13 +58,18 @@ nav .navbar-nav a.active {
   padding: 0.8rem 2.2rem;
   border-radius: 0.3rem;
 }
+.navbar-extra .job:hover,
+.navbar-extra .login:hover {
+  background-color: #969696;
+  color: #fff;
+}
 .navbar-extra .job {
   background-color: #b91010;
   color: #fff;
   padding: 0.8rem 2.6rem;
   border-radius: 0.3rem;
 }
-
+/* Halaman About */
 /* Hero Section */
 .hero {
   display: flex;
@@ -572,7 +576,240 @@ footer .element-sosmed .sosmed-fb {
   margin-left: 0.5rem;
   background-color: #3b5998;
 }
+/* Halaman Contact */
+/* Hero Section */
+.hero-contact {
+  display: flex;
+  min-height: 80vh;
+  align-items: center;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgb(1, 1, 3, 0.7)),
+    url("../img/tyler-franta-iusJ25iYu1c-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.hero-contact .content {
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.hero-contact .content h2 {
+  color: var(--orange);
+  font-size: 2.8rem;
+  font-weight: 600;
+  padding: 1rem 7%;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+.hero-contact .content p {
+  padding: 2px 7%;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+/* Contact Sosmed Section */
+.contact-sosmed {
+  width: 100%;
+}
+.contact-sosmed h2 {
+  text-align: center;
+  margin: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.contact-sosmed h2 span {
+  color: #ff6900;
+}
+.contact-sosmed .element {
+  display: flex;
+  margin: 2rem auto;
+  width: 70%;
+  justify-content: space-around;
+}
+.contact-sosmed .element .card {
+  height: 280px;
+  width: 270px;
+  padding: 1rem;
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 3px 3px 10px rgba(1, 1, 3, 0.5);
+}
+.contact-sosmed .element .card img {
+  height: 32px;
+  margin-top: 1rem;
+}
+.contact-sosmed .element .card h3 {
+  margin-top: 2rem;
+  font-weight: 600;
+}
+.contact-sosmed .element .card p {
+  color: #393939;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+.contact-sosmed .element-sosmed {
+  display: flex;
+  margin: 2rem auto;
+  width: 20%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.contact-sosmed .element-sosmed a {
+  cursor: pointer;
+}
+.contact-sosmed .element-sosmed img {
+  width: 1.5rem;
+}
+.contact-sosmed .element-sosmed .sosmed-li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  background-color: #ff6900;
+}
+.contact-sosmed .element-sosmed .sosmed-ig {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  background-color: #ff6900;
+}
+.contact-sosmed .element-sosmed .sosmed-wa {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  background-color: #ff6900;
+}
+.contact-sosmed .element-sosmed .sosmed-fb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  background-color: #ff6900;
+}
+/* Contact Section */
+.contact {
+  display: flex;
+  justify-content: center;
+  background-color: #ffe5d3;
+}
+.contact .card {
+  margin: 2rem 3rem;
+  z-index: 4;
+  width: 70%;
+  background-color: #fff;
+  box-shadow: 3px 3px 10px rgb(1, 1, 3, 0.3);
+  padding: 3rem;
+}
+.contact .card h3 {
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
 
+.contact .container-1 {
+  display: flex;
+  width: 100%;
+}
+.contact .container-1 .form-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 1rem;
+}
+.contact .container-1 .form-1 input {
+  background-color: #f0f5f7;
+  padding: 1rem;
+  border-radius: 7px;
+  font-family: "Jost", sans-serif;
+  font-size: 0.9rem;
+  width: 100%;
+}
+.contact .container-1 .form-1-1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.contact .container-1 .form-1-1 input {
+  background-color: #f0f5f7;
+  padding: 1rem;
+  border-radius: 7px;
+  font-family: "Jost", sans-serif;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+.contact input {
+  border: 2px solid transparent;
+}
+.contact input:focus {
+  border: 2px solid #0693e3;
+  background-color: #ffffff;
+}
+.contact textarea {
+  border: 2px solid transparent;
+}
+.contact textarea:focus {
+  border: 2px solid #0693e3;
+  background-color: #fff;
+}
+.contact .container-2 {
+  width: 100%;
+}
+.contact .container-2 .form-2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.contact .container-2 .form-2 span {
+  margin: 1rem 0 0;
+}
+.contact .container-2 .form-2 input {
+  background-color: #f0f5f7;
+  margin: 0;
+  padding: 1rem;
+  font-family: "Jost", sans-serif;
+  font-size: 0.9rem;
+  border-radius: 7px;
+  width: auto;
+}
+.contact .container-2 .form-2 textarea {
+  background-color: #f0f5f7;
+  margin: 0;
+  font-family: "Jost", sans-serif;
+  font-size: 0.9rem;
+  padding: 1rem;
+  resize: none;
+  border-radius: 7px;
+  width: auto;
+}
+.contact button {
+  margin-top: 2rem;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.9rem;
+  background-color: #0693e3;
+  padding: 1rem 7rem;
+  cursor: pointer;
+}
 /* Media Queries */
 /* Laptop */
 @media (max-width: 1366px) {

@@ -104,10 +104,8 @@ nav .navbar-nav a.active {
 
 .photos .card-photos {
   display: flex;
-  position: relative;
-  bottom: 8rem;
   flex-wrap: wrap;
-  margin: 0 4rem;
+  margin: -8rem 4rem 0;
   padding: 2rem 2rem;
   justify-content: center;
   background-color: var(--white);
@@ -115,7 +113,6 @@ nav .navbar-nav a.active {
   border-radius: 2rem;
 }
 .photos .card-photos img {
-  position: relative;
   width: 250px;
   height: 170px;
   margin: 2rem 0.5rem 2rem;
@@ -129,7 +126,7 @@ nav .navbar-nav a.active {
 }
 /* Count Section */
 .count {
-  margin-top: 1rem;
+  margin-top: 4rem;
 }
 .count-1 {
   padding: 2rem 7%;
@@ -157,9 +154,8 @@ nav .navbar-nav a.active {
 }
 .circle-1 {
   display: flex;
-  position: relative;
   justify-content: flex-end;
-  bottom: 120px;
+  margin-top: -200px;
 }
 
 .circle-1 img {
@@ -170,11 +166,9 @@ nav .navbar-nav a.active {
 /* About SabiKerja Section*/
 .about-us {
   z-index: -2;
-  height: 30vh;
 }
 .about-us .content {
-  bottom: 530px;
-  position: relative;
+  margin-top: -400px;
   padding: 4rem 10% 4.2rem;
 }
 .about-us .content .card-about {
@@ -315,7 +309,7 @@ nav .navbar-nav a.active {
 .service {
   margin-top: 4rem;
   background-image: linear-gradient(rgb(255, 229, 211, 1), rgb(1, 1, 3, 0));
-  height: 100vh;
+  /* height: 100vh; */
   padding: 2rem 7%;
 }
 .service h2 {
@@ -402,9 +396,9 @@ nav .navbar-nav a.active {
 }
 
 .card .card-img img {
-  position: relative;
-  bottom: 130px;
-  width: 180px;
+  /* position: relative; */
+  margin-top: -130px;
+  max-width: 180px;
   border-radius: 50%;
   outline: 10px solid #fff;
   box-shadow: 10px 10px 10px rgba(1, 1, 3, 0.3);
@@ -629,14 +623,16 @@ footer .element-sosmed .sosmed-fb {
 }
 .contact-sosmed .element {
   display: flex;
-  margin: 2rem auto;
+  margin: 2rem auto 0;
   width: 70%;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .contact-sosmed .element .card {
   height: 280px;
   width: 270px;
   padding: 1rem;
+  margin-bottom: 2rem;
   text-align: center;
   background-color: #fff;
   box-shadow: 3px 3px 10px rgba(1, 1, 3, 0.5);
@@ -834,19 +830,21 @@ footer .element-sosmed .sosmed-fb {
   }
   nav {
     position: fixed;
+    background: linear-gradient(rgba(1, 1, 3, 0.2), rgba(1, 1, 3, 0));
   }
   nav .navbar-nav {
     display: flex;
     flex-direction: column;
     position: absolute;
     top: 0;
-    background-color: #eee;
-    width: 400px;
+    background-color: #fff;
+    width: 70%;
     min-height: 100vh;
     line-height: 3;
     padding: 2rem;
     left: -120%;
     transition: 0.3s linear;
+    box-shadow: 3px 3px 10px rgb(1, 1, 3, 0.3);
   }
   nav .navbar-nav.active {
     left: 0;
@@ -857,7 +855,7 @@ footer .element-sosmed .sosmed-fb {
     align-items: center;
   }
   nav .navbar-nav a {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
   nav .navbar-extra .login,
   nav .navbar-extra .job,
@@ -885,6 +883,103 @@ footer .element-sosmed .sosmed-fb {
   footer .element {
     width: 100%;
   }
+  /* About section */
+  .hero .content h2 {
+    font-size: 2rem;
+  }
+  .photos .card-photos img {
+    width: 100%;
+    height: 10%;
+    margin: 1rem;
+  }
+  .count .count-1 h2 {
+    font-size: 2rem;
+  }
+  .count .count-2 h3 {
+    font-size: 2.3rem;
+  }
+  .count .content .circle-1 img {
+    width: 80%;
+  }
+  .about-us .content .card-about {
+    padding: 3rem;
+    margin-top: 2rem;
+  }
+  .about-us .content .card-about h2 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  .about-us .content .card-about p {
+    font-size: 1.1rem;
+  }
+  .solve .content h2 {
+    font-size: 2rem;
+  }
+  .solve .content .solve-content {
+    flex-wrap: wrap;
+  }
+  .solve .content .solve-content .solve-img img {
+    width: 280px;
+    height: 280px;
+  }
+  .solve .content .solve-content .solve-img img.img-1 {
+    margin-left: 6rem;
+  }
+  .solve .content .solve-content .solve-img img.img-2 {
+    left: 40%;
+    top: 18%;
+  }
+  .solve .content .solve-content .line {
+    display: none;
+  }
+  .solve .content .solve-content .element {
+    margin: 10rem 0;
+  }
+  .solve .content .solve-content .element .card {
+    margin: 0 0 1rem;
+  }
+  .solve .content .solve-content .element h3 {
+    font-size: 1rem;
+  }
+  .solve .content .solve-content .element p {
+    font-size: 0.8rem;
+  }
+  .service .content .element {
+    flex-wrap: wrap;
+  }
+  .service .content .element .card {
+    margin: 0 1rem 1rem;
+  }
+  .service .content h2 {
+    font-size: 2rem;
+  }
+  .service .content .element .card li {
+    font-size: 1rem;
+  }
+  .testi .content h2 {
+    font-size: 1.8rem;
+  }
+  .testi .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .testi .content .card {
+    width: 90%;
+    margin: 2rem;
+    margin-top: 5rem;
+  }
+  .testi .content .card img {
+    width: 140px;
+    margin-top: -100px;
+  }
+  .end .content .btn {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  /* .testi .content .card img { */
   /* Contact Section */
   .hero-contact .content {
     width: 70%;
@@ -930,7 +1025,143 @@ footer .element-sosmed .sosmed-fb {
   .circle-1 {
     top: 335vh;
   }
-  /* Contact Section */
+  /* About Page */
+  /* About section */
+  .hero .content h2 {
+    font-size: 1.5rem;
+  }
+  .photos .card-photos {
+    margin: 0 1rem;
+  }
+  .photos .card-photos img {
+    width: 100%;
+    height: 10%;
+    margin: 0.5rem;
+  }
+  .count .count-1 h2 {
+    font-size: 1.5rem;
+  }
+  .count .count-2 h3 {
+    font-size: 1.7rem;
+  }
+  .count .content .circle-1 img {
+    width: 80%;
+  }
+  .about-us .content {
+    margin: 0;
+    margin-top: -100px;
+    width: 100%;
+  }
+  .about-us .content .card-about {
+    padding: 2rem;
+    margin: 0;
+    width: 100%;
+  }
+  .about-us .content .card-about h2 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  .about-us .content .card-about p {
+    font-size: 0.9rem;
+  }
+  .solve .content h2 {
+    font-size: 1.5rem;
+  }
+  .solve .content .solve-content {
+    flex-wrap: wrap;
+  }
+  .solve .content .solve-content .solve-img img {
+    width: 200px;
+    height: 200px;
+  }
+  .solve .content .solve-content .solve-img img.img-1 {
+    margin-left: 0.5rem;
+  }
+  .solve .content .solve-content .solve-img img.img-2 {
+    left: 35%;
+    top: 18%;
+  }
+  .solve .content .solve-content .line {
+    display: none;
+  }
+  .solve .content .solve-content .element {
+    margin: 10rem 0;
+  }
+  .solve .content .solve-content .element .card-solve {
+    margin: 0 0.5rem 1rem;
+    padding: 0.5rem;
+  }
+  .solve .content .solve-content .element h3 {
+    font-size: 0.7rem;
+  }
+  .solve .content .solve-content .element p {
+    font-size: 0.7rem;
+  }
+  .service {
+    margin-top: -100px;
+  }
+  .service .content .element {
+    flex-wrap: wrap;
+  }
+  .service .content .element .card {
+    margin: 0 1rem 1rem;
+  }
+  .service .content h2 {
+    font-size: 1.5rem;
+  }
+  .service .content .element .card h3 {
+    font-size: 1.3rem;
+  }
+  .service .content .element .card li {
+    font-size: 0.8rem;
+  }
+  .service .content .element .card p {
+    font-size: 0.6rem;
+  }
+  .testi .content h2 {
+    font-size: 1.5rem;
+  }
+  .testi .content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .testi .content .card {
+    width: 90%;
+    margin: 1rem;
+    margin-top: 5rem;
+  }
+  .testi .content .card img {
+    width: 140px;
+    margin-top: -100px;
+  }
+  .testi .content .card h4 {
+    font-size: 1rem;
+  }
+  .testi .content .card h3 {
+    font-size: 1.2rem;
+  }
+  .testi .content .card p {
+    font-size: 0.8rem;
+  }
+  .end .content {
+    margin: 2rem;
+  }
+  .end .content h3 {
+    font-size: 1.3rem;
+  }
+  .end .content p {
+    font-size: 0.8rem;
+  }
+  .end .content .btn {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  .end .content .btn .btn-1 {
+    margin-bottom: 0.5rem;
+  }
+  /* Contact Page */
   .hero-contact .content {
     width: 80%;
   }

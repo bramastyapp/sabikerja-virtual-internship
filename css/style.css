@@ -35,6 +35,10 @@ nav {
 .navbar-logo {
   padding-top: 0.5rem;
 }
+.logo-hidden {
+  display: none;
+  padding-top: 0.5rem;
+}
 nav a {
   font-weight: 400;
   color: var(--black);
@@ -68,6 +72,9 @@ nav .navbar-nav a.active {
   color: #fff;
   padding: 0.8rem 2.6rem;
   border-radius: 0.3rem;
+}
+#hamburger {
+  display: none;
 }
 /* Halaman About */
 /* Hero Section */
@@ -748,7 +755,7 @@ footer .element-sosmed .sosmed-fb {
   margin-left: 1rem;
 }
 .contact .container-1 .form-1-1 input {
-  background-color: #f0f5f7;
+  background: #f0f5f7;
   padding: 1rem;
   border-radius: 7px;
   font-family: "Jost", sans-serif;
@@ -761,14 +768,12 @@ footer .element-sosmed .sosmed-fb {
 }
 .contact input:focus {
   border: 2px solid #0693e3;
-  background-color: #ffffff;
 }
 .contact textarea {
   border: 2px solid transparent;
 }
 .contact textarea:focus {
   border: 2px solid #0693e3;
-  background-color: #fff;
 }
 .contact .container-2 {
   width: 100%;
@@ -819,9 +824,47 @@ footer .element-sosmed .sosmed-fb {
 }
 /* Tablet */
 @media (max-width: 768px) {
-  html {
-    font-size: 75%;
+  /* Navbar */
+  #hamburger {
+    display: flex;
+    cursor: pointer;
   }
+  .navbar-nav .x {
+    cursor: pointer;
+  }
+  nav {
+    position: fixed;
+  }
+  nav .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    background-color: #eee;
+    width: 400px;
+    min-height: 100vh;
+    line-height: 3;
+    padding: 2rem;
+    left: -120%;
+    transition: 0.3s linear;
+  }
+  nav .navbar-nav.active {
+    left: 0;
+  }
+  nav .logo-hidden {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .navbar-nav a {
+    font-size: 1.4rem;
+  }
+  nav .navbar-extra .login,
+  nav .navbar-extra .job,
+  nav .navbar-extra .lonceng {
+    display: none;
+  }
+
   .hero .content h2 {
     padding: 2rem 7%;
   }
@@ -831,13 +874,112 @@ footer .element-sosmed .sosmed-fb {
   .circle-1 {
     top: 410vh;
   }
+  /* Footer */
+  footer {
+    flex-direction: column;
+    padding: 3rem;
+  }
+  footer .element-1 {
+    width: 100%;
+  }
+  footer .element {
+    width: 100%;
+  }
+  /* Contact Section */
+  .hero-contact .content {
+    width: 70%;
+  }
+  .hero-contact .content h2 {
+    font-size: 2.3rem;
+  }
+  .hero-contact .content p {
+    font-size: 1rem;
+  }
+  .contact-sosmed .element {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .contact-sosmed .element .card {
+    margin: 0 0 1rem;
+    width: 220px;
+  }
+  .contact-sosmed .element .card p {
+    font-size: 0.8rem;
+  }
+  .contact-sosmed .element-sosmed {
+    width: 40%;
+  }
+  .contact .card {
+    width: 100%;
+  }
+  .contact .card .container-1 input {
+    padding: 0.5rem;
+  }
+  .contact .card .container-2 input {
+    padding: 0.5rem;
+  }
+  .contact .card .container-2 textarea {
+    padding: 0.5rem;
+  }
 }
 /* Phone */
 @media (max-width: 450px) {
-  html {
+  /* html {
     font-size: 55%;
-  }
+  } */
   .circle-1 {
     top: 335vh;
+  }
+  /* Contact Section */
+  .hero-contact .content {
+    width: 80%;
+  }
+  .hero-contact .content h2 {
+    font-size: 2rem;
+  }
+  .hero-contact .content p {
+    font-size: 0.8rem;
+  }
+  .contact-sosmed .element {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .contact-sosmed .element .card {
+    margin: 0 0 1rem;
+    width: 250px;
+  }
+  .contact-sosmed .element .card p {
+    font-size: 0.8rem;
+  }
+  .contact-sosmed .element-sosmed {
+    width: 70%;
+  }
+  .contact .card {
+    width: 90%;
+    padding: 2rem 1.4rem;
+  }
+  .contact .card span {
+    font-size: 0.8rem;
+  }
+  .contact .card .container-1 {
+    flex-direction: column;
+  }
+  .contact .card .container-1 form-1 {
+    margin: 0;
+  }
+  .contact .card .container-1 .form-1-1 {
+    margin: 1rem 0 0;
+  }
+  .contact .card .container-1 input {
+    padding: 0.5rem;
+  }
+  .contact .card .container-2 input {
+    padding: 0.5rem;
+  }
+  .contact .card .container-2 textarea {
+    padding: 0.5rem;
+  }
+  .contact .card button {
+    padding: 0.8rem 2rem;
   }
 }
